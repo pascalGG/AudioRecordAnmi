@@ -36,12 +36,15 @@ class MainActivity:AppCompatActivity(){
                 record.text = "暂停录音"
             }else{
                 stopRecord()
+                audioAnimView.resetPlay()
                 record.text = "录音"
             }
 
         }
         play.setOnClickListener{
             mFilePath?.run {
+                VoiceManager.stopAllVoice()
+                audioAnimView.resetPlay()
                 VoiceManager.voiceOnclick(this@MainActivity,this, object :VoiceManager.VedioPlayListener{
                     override fun onStart() {
                         isPlay = true
@@ -57,6 +60,7 @@ class MainActivity:AppCompatActivity(){
 
                     override fun onStop() {
                         isPlay = false
+                        audioAnimView.resetPlay()
                     }
                 })
             }
