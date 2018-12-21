@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <declare-styleable name="AudioAnimViewStyle">
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="moveLineWidth" format="dimension" />
+        <attr name="moveLineColor" format="color" />
+        <attr name="itemWidth" format="dimension" />
+        <attr name="itemColor" format="color" />
+        <attr name="step" format="dimension" />
+        <attr name="horizontalLineOffset" format="dimension" />
+    </declare-styleable>
+</resources>
