@@ -16,5 +16,6 @@
         <attr name="itemColor" format="color" />
         <attr name="step" format="dimension" />
         <attr name="horizontalLineOffset" format="dimension" />
+        <attr name="patchValue" format="float" />
     </declare-styleable>
 </resources>

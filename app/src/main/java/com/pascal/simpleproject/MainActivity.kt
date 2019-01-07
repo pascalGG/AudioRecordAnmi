@@ -4,6 +4,7 @@ import android.media.MediaRecorder
 import android.os.Bundle
 import android.os.Environment
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.Toast
 import com.pascal.simpleproject.audioanimview.VoiceManager
 import com.yanzhenjie.permission.AndPermission
@@ -31,6 +32,8 @@ class MainActivity:AppCompatActivity(){
 
     private fun initView() {
         record.setOnClickListener{
+            audioAnimView.visibility = View.VISIBLE
+            audioAnimViewTwo.visibility = View.GONE
             if(!isRecording){
                 requstPermisson()
                 record.text = "暂停录音"
@@ -42,6 +45,8 @@ class MainActivity:AppCompatActivity(){
 
         }
         play.setOnClickListener{
+            audioAnimView.visibility = View.VISIBLE
+            audioAnimViewTwo.visibility = View.GONE
             mFilePath?.run {
                 VoiceManager.stopAllVoice()
                 audioAnimView.resetPlay()
@@ -64,6 +69,11 @@ class MainActivity:AppCompatActivity(){
                     }
                 })
             }
+        }
+        playle.setOnClickListener {
+            audioAnimView.visibility = View.GONE
+            audioAnimViewTwo.visibility = View.VISIBLE
+            audioAnimViewTwo.startAnimiton()
         }
     }
 

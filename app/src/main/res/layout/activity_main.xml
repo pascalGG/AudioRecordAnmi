@@ -19,6 +19,22 @@
         app:itemColor="@color/gray_dcdcdc"
         app:step = "3dp"
         android:layout_height="159dp"/>
+
+
+    <com.pascal.simpleproject.audioanimview.AudioItemAnimView
+        android:id="@+id/audioAnimViewTwo"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        app:lineWidth="0.5dp"
+        app:lineColor="@color/gray_dcdcdc"
+        app:moveLineWidth="0.5dp"
+        app:moveLineColor="@color/gray_dcdcdc"
+        app:itemWidth="2dp"
+        app:itemColor="@color/gray_dcdcdc"
+        app:patchValue="2"
+        app:step = "3dp"
+        android:layout_height="159dp"/>
     <LinearLayout
         android:orientation="horizontal"
         android:gravity="center"
@@ -26,15 +42,22 @@
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/record"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="录音"/>
         <Button
             android:id="@+id/play"
             android:layout_marginLeft="30dp"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="播放"/>
+
+        <Button
+            android:id="@+id/playle"
+            android:layout_marginLeft="30dp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="假动画"/>
     </LinearLayout>
 
 </LinearLayout>
